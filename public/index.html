@@ -1,289 +1,306 @@
-:root {
---cb-pink: #ff007f;
---cb-blue: #00f0ff;
---cb-purple: #7000ff;
---cb-dark: #0a0f1d;
-}
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, sans-serif;
--webkit-tap-highlight-color: transparent;
-}
-body {
-background-color: var(--cb-dark);
-color: #fff;
-padding-bottom: 50px;
-text-align: center;
-overflow-x: hidden;
-}
-.mobile-header {
-background: linear-gradient(135deg, var(--cb-purple), var(--cb-dark));
-padding: 20px;
-border-bottom: 3px solid var(--cb-blue);
-box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
-position: sticky;
-top: 0;
-z-index: 99;
-}
-.shop-name {
-font-size: 24px;
-font-weight: 900;
-text-shadow: 0 0 10px var(--cb-blue), 0 0 20px var(--cb-pink);
-}
-.user-panel {
-max-width: 500px;
-margin: 15px auto;
-background: rgba(30, 41, 59, 0.7);
-border: 1px solid var(--cb-blue);
-border-radius: 15px;
-padding: 15px;
-width: 92%;
-backdrop-filter: blur(10px);
-}
-.login-input {
-width: 100%;
-padding: 14px;
-border: 2px solid var(--cb-purple);
-border-radius: 25px;
-margin-bottom: 12px;
-text-align: center;
-outline: none;
-background: #111b30;
-color: #fff;
-font-size: 15px;
-}
-.login-btn {
-background: linear-gradient(to right, var(--cb-pink), var(--cb-purple));
-color: white;
-border: none;
-padding: 14px;
-border-radius: 25px;
-width: 100%;
-font-weight: bold;
-cursor: pointer;
-box-shadow: 0 0 15px var(--cb-pink);
-}
-.profile {
-display: flex;
-align-items: center;
-justify-content: space-between;
-width: 100%;
-text-align: left;
-}
-.uid-tag {
-background: var(--cb-blue);
-color: #000;
-font-size: 12px;
-padding: 3px 10px;
-border-radius: 5px;
-font-weight: bold;
-}
-.money {
-color: #39ff14;
-font-weight: bold;
-font-size: 18px;
-text-shadow: 0 0 5px #39ff14;
-}
-.btn-add-money {
-background: var(--cb-pink);
-color: #fff;
-border: none;
-padding: 5px 12px;
-border-radius: 12px;
-font-size: 12px;
-font-weight: bold;
-cursor: pointer;
-box-shadow: 0 0 8px var(--cb-pink);
-}
-.banner {
-max-width: 500px;
-width: 92%;
-margin: 10px auto;
-background: linear-gradient(45deg, #1e1b4b, #431407);
-border-radius: 15px;
-padding: 15px;
-color: #fff;
-text-align: center;
-font-weight: bold;
-border: 1px solid var(--cb-pink);
-}
-.shop-container {
-max-width: 500px;
-width: 92%;
-margin: 20px auto;
-text-align: left;
-}
-.section-title {
-font-size: 19px;
-font-weight: 800;
-margin-bottom: 15px;
-color: var(--cb-blue);
-text-shadow: 0 0 5px var(--cb-blue);
-}
-.bag-card {
-background: #111827;
-border-radius: 20px;
-border: 2px solid var(--cb-blue);
-overflow: hidden;
-margin-bottom: 25px;
-text-align: center;
-padding: 20px;
-box-shadow: 0 0 15px rgba(0,240,255,0.15);
-}
-.bag-price {
-font-size: 22px;
-font-weight: 900;
-color: var(--cb-blue);
-margin: 8px 0 15px 0;
-text-shadow: 0 0 5px var(--cb-blue);
-}
-.btn-open {
-background: linear-gradient(to right, var(--cb-blue), var(--cb-purple));
-color: white;
-border: none;
-width: 100%;
-padding: 14px;
-font-size: 16px;
-font-weight: bold;
-border-radius: 15px;
-cursor: pointer;
-box-shadow: 0 0 15px var(--cb-blue);
-text-shadow: 0 0 3px #fff;
-}
-.wheel-outer-box {
-position: relative;
-width: 260px;
-height: 260px;
-margin: 15px auto;
-border-radius: 50%;
-border: 6px solid var(--cb-blue);
-box-shadow: 0 0 20px var(--cb-blue);
-overflow: hidden;
-}
-.wheel-container {
-width: 100%;
-height: 100%;
-transition: transform 4s cubic-bezier(0.1, 0.8, 0.1, 1);
-}
-.wheel-background-img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-content: url('imgur.com');
-}
-.wheel-pointer {
-position: absolute;
-top: -5px;
-left: 50%;
-transform: translateX(-50%);
-width: 0;
-height: 0;
-border-left: 15px solid transparent;
-border-right: 15px solid transparent;
-border-top: 25px solid var(--cb-pink);
-z-index: 10;
-filter: drop-shadow(0 0 5px var(--cb-pink));
-}
-.history-box {
-background: #111c2e;
-border: 1px solid var(--cb-purple);
-border-radius: 15px;
-padding: 15px;
-margin-top: 25px;
-}
-.history-title {
-font-size: 16px;
-font-weight: bold;
-color: var(--cb-blue);
-border-bottom: 1px solid #2d3748;
-padding-bottom: 8px;
-margin-bottom: 10px;
-}
-.history-list {
-max-height: 200px;
-overflow-y: auto;
-font-size: 13px;
-text-align: left;
-}
-.history-item {
-padding: 8px;
-border-bottom: 1px solid #1e293b;
-line-height: 1.4;
-}
-.history-result {
-color: #39ff14;
-font-weight: bold;
-margin-top: 2px;
-word-break: break-all;
-}
-.modal {
-display: none;
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0,0,0,0.85);
-z-index: 1000;
-justify-content: center;
-align-items: center;
-padding: 20px;
-backdrop-filter: blur(5px);
-}
-.modal-content {
-background: #151f32;
-border: 2px solid var(--cb-blue);
-border-radius: 20px;
-padding: 25px;
-width: 100%;
-max-width: 400px;
-text-align: center;
-box-shadow: 0 0 30px var(--cb-blue);
-}
-.acc-info-box {
-background: #0b111e;
-border: 2px dashed var(--cb-pink);
-padding: 15px;
-border-radius: 12px;
-margin: 15px 0;
-text-align: left;
-}
-.btn-close {
-background: #334155;
-color: white;
-border: none;
-padding: 12px 25px;
-border-radius: 10px;
-font-weight: bold;
-width: 100%;
-cursor: pointer;
-}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>⚡ CYBER WHEEL - VÒNG QUAY MAY MẮN PLAY TOGETHER ⚡</title>
+    <style>
+        :root { 
+            --cb-pink: #ff007f; 
+            --cb-blue: #00f0ff; 
+            --cb-purple: #7000ff; 
+            --cb-dark: #0a0f1d; 
+        }
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: Arial, sans-serif; 
+            -webkit-tap-highlight-color: transparent; 
+        }
+        body { 
+            background-color: var(--cb-dark); 
+            color: #fff; 
+            padding-bottom: 50px; 
+            text-align: center; 
+            overflow-x: hidden; 
+        }
+        .mobile-header { 
+            background: linear-gradient(135deg, var(--cb-purple), var(--cb-dark)); 
+            padding: 20px; 
+            border-bottom: 3px solid var(--cb-blue); 
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3); 
+            position: sticky; 
+            top: 0; 
+            z-index: 99; 
+        }
+        .shop-name { 
+            font-size: 24px; 
+            font-weight: 900; 
+            text-shadow: 0 0 10px var(--cb-blue), 0 0 20px var(--cb-pink); 
+        }
+        .user-panel { 
+            max-width: 500px; 
+            margin: 15px auto; 
+            background: rgba(30, 41, 59, 0.7); 
+            border: 1px solid var(--cb-blue); 
+            border-radius: 15px; 
+            padding: 15px; 
+            width: 92%; 
+            backdrop-filter: blur(10px); 
+        }
+        .login-input { 
+            width: 100%; 
+            padding: 14px; 
+            border: 2px solid var(--cb-purple); 
+            border-radius: 25px; 
+            margin-bottom: 12px; 
+            text-align: center; 
+            outline: none; 
+            background: #111b30; 
+            color: #fff; 
+            font-size: 15px; 
+        }
+        .login-btn { 
+            background: linear-gradient(to right, var(--cb-pink), var(--cb-purple)); 
+            color: white; 
+            border: none; 
+            padding: 14px; 
+            border-radius: 25px; 
+            width: 100%; 
+            font-weight: bold; 
+            cursor: pointer; 
+            box-shadow: 0 0 15px var(--cb-pink); 
+        }
+        .profile { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            width: 100%; 
+            text-align: left; 
+        }
+        .uid-tag { 
+            background: var(--cb-blue); 
+            color: #000; 
+            font-size: 12px; 
+            padding: 3px 10px; 
+            border-radius: 5px; 
+            font-weight: bold; 
+        }
+        .money { 
+            color: #39ff14; 
+            font-weight: bold; 
+            font-size: 18px; 
+            text-shadow: 0 0 5px #39ff14; 
+        }
+        .btn-add-money { 
+            background: var(--cb-pink); 
+            color: #fff; 
+            border: none; 
+            padding: 5px 12px; 
+            border-radius: 12px; 
+            font-size: 12px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            box-shadow: 0 0 8px var(--cb-pink); 
+        }
+        .banner { 
+            max-width: 500px; 
+            width: 92%; 
+            margin: 10px auto; 
+            background: linear-gradient(45deg, #1e1b4b, #431407); 
+            border-radius: 15px; 
+            padding: 15px; 
+            color: #fff; 
+            text-align: center; 
+            font-weight: bold; 
+            border: 1px solid var(--cb-pink); 
+        }
+        .shop-container { 
+            max-width: 500px; 
+            width: 92%; 
+            margin: 20px auto; 
+            text-align: left; 
+        }
+        .section-title { 
+            font-size: 19px; 
+            font-weight: 800; 
+            margin-bottom: 15px; 
+            color: var(--cb-blue); 
+            text-shadow: 0 0 5px var(--cb-blue); 
+        }
+        .bag-card { 
+            background: #111827; 
+            border-radius: 20px; 
+            border: 2px solid var(--cb-blue); 
+            overflow: hidden; 
+            margin-bottom: 25px; 
+            text-align: center; 
+            padding: 20px; 
+            box-shadow: 0 0 15px rgba(0,240,255,0.15); 
+        }
+        .bag-price { 
+            font-size: 22px; 
+            font-weight: 900; 
+            color: var(--cb-blue); 
+            margin: 8px 0 15px 0; 
+            text-shadow: 0 0 5px var(--cb-blue); 
+        }
+        .btn-open { 
+            background: linear-gradient(to right, var(--cb-blue), var(--cb-purple)); 
+            color: white; 
+            border: none; 
+            width: 100%; 
+            padding: 14px; 
+            font-size: 16px; 
+            font-weight: bold; 
+            border-radius: 15px; 
+            cursor: pointer; 
+            box-shadow: 0 0 15px var(--cb-blue); 
+            text-shadow: 0 0 3px #fff; 
+        }
+        .wheel-outer-box {
+            position: relative;
+            width: 260px;
+            height: 260px;
+            margin: 15px auto;
+            border-radius: 50%;
+            border: 6px solid var(--cb-blue);
+            box-shadow: 0 0 20px var(--cb-blue);
+            overflow: hidden;
+        }
+        .wheel-container { 
+            width: 100%;
+            height: 100%;
+            transition: transform 4s cubic-bezier(0.1, 0.8, 0.1, 1); 
+        }
+        .wheel-background-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            content: url('https://imgur.com'); 
+        }
+        .wheel-pointer { 
+            position: absolute; 
+            top: -5px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            width: 0; 
+            height: 0; 
+            border-left: 15px solid transparent; 
+            border-right: 15px solid transparent; 
+            border-top: 25px solid var(--cb-pink); 
+            z-index: 10; 
+            filter: drop-shadow(0 0 5px var(--cb-pink)); 
+        }
+        .history-box { 
+            background: #111c2e; 
+            border: 1px solid var(--cb-purple); 
+            border-radius: 15px; 
+            padding: 15px; 
+            margin-top: 25px; 
+        }
+        .history-title { 
+            font-size: 16px; 
+            font-weight: bold; 
+            color: var(--cb-blue); 
+            border-bottom: 1px solid #2d3748; 
+            padding-bottom: 8px; 
+            margin-bottom: 10px; 
+        }
+        .history-list { 
+            max-height: 200px; 
+            overflow-y: auto; 
+            font-size: 13px; 
+            text-align: left; 
+        }
+        .history-item { 
+            padding: 8px; 
+            border-bottom: 1px solid #1e293b; 
+            line-height: 1.4; 
+        }
+        .history-result { 
+            color: #39ff14; 
+            font-weight: bold; 
+            margin-top: 2px; 
+            word-break: break-all; 
+        }
+        .modal { 
+            display: none; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: rgba(0,0,0,0.85); 
+            z-index: 1000; 
+            justify-content: center; 
+            align-items: center; 
+            padding: 20px; 
+            backdrop-filter: blur(5px); 
+        }
+        .modal-content { 
+            background: #151f32; 
+            border: 2px solid var(--cb-blue); 
+            border-radius: 20px; 
+            padding: 25px; 
+            width: 100%; 
+            max-width: 400px; 
+            text-align: center; 
+            box-shadow: 0 0 30px var(--cb-blue); 
+        }
+        .acc-info-box { 
+            background: #0b111e; 
+            border: 2px dashed var(--cb-pink); 
+            padding: 15px; 
+            border-radius: 12px; 
+            margin: 15px 0; 
+            text-align: left; 
+        }
+        .btn-close { 
+            background: #334155; 
+            color: white; 
+            border: none; 
+            padding: 12px 25px; 
+            border-radius: 10px; 
+            font-weight: bold; 
+            width: 100%; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-header">
+        <div class="shop-name">⚡ VÒNG QUAY MAY MẮN PLAY TOGETHER 4K ⚡</div>
+    </div>
 
+    <div class="user-panel" id="auth-panel">
+        <div class="login-box">
+            <p style="font-size: 13px; font-weight: bold; margin-bottom: 12px; color: var(--cb-blue);">🌐 ĐĂNG NHẬP HỆ THỐNG ĐỒNG BỘ LỊCH SỬ</p>
+            <input type="email" id="gmail-input" class="login-input" placeholder="Nhập địa chỉ Gmail của bạn...">
+            <button class="login-btn" onclick="handleGmailLogin()">XÁC NHẬN VÀO SHOP</button>
+        </div>
+    </div>
 
+    <div class="banner">🎉 CHÀO MỪNG ĐẾN VỚI VÒNG QUAY ACC SIÊU CẤP CHÍNH CHỦ 🎉</div>
 
+    <div class="shop-container">
+        <div class="section-title">🎯 VÒNG QUAY ACC GAME MAY MẮN</div>
+        <div class="bag-card">
+            <div style="font-size:18px; font-weight:bold; color:var(--cb-blue); margin-bottom:10px;">Vòng Quay Siêu Phẩm Play Together</div>
+            <div class="wheel-outer-box">
+                <div class="wheel-pointer"></div>
+                <div class="wheel-container" id="wheel">
+                    <div class="wheel-background-img"></div>
+                </div>
+            </div>
+            <div class="bag-price">4,000đ</div>
+            <button class="btn-open" onclick="spinWheel()">QUAY VÒNG QUAY NGAY</button>
+        </div>
 
-⚡ VÒNG QUAY MAY MẮN PLAY TOGETHER 4K ⚡
-🌐 ĐĂNG NHẬP HỆ THỐNG ĐỒNG BỘ LỊCH SỬ
-
-XÁC NHẬN VÀO SHOP
-
-🎉 CHÀO MỪNG ĐẾN VỚI VÒNG QUAY ACC SIÊU CẤP CHÍNH CHỦ 🎉
-🎯 VÒNG QUAY ACC GAME MAY MẮN
-
-Vòng Quay Siêu Phẩm Play Together
-
-
-
-
-
-
-4,000đ
-QUAY VÒNG QUAY NGAY
-📜 LỊCH SỬ QUAY SỐ TRÚNG THƯỞNG
-
-Chưa có lịch sử giao dịch nào.
+        <div class="history-box" id="history-container" style="display:none;">
+            <div class="history-title">📜 LỊCH SỬ QUAY SỐ TRÚNG THƯỞNG</div>
+            <div class="history-list" id="history-list-area">Chưa có lịch sử giao dịch nào.
 
 
 let currentUser = null;
